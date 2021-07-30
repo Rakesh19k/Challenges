@@ -5,10 +5,10 @@ const latterCapitalize = (str) => {
     arr.forEach(function(item, index) {
       arr[index] = item.replace(item[0], item[0].toUpperCase());
     });
-  
+
     return arr.join(" ");
 };
-  
+
 console.log(latterCapitalize("PIZZA PIZZA PIZZA"));
 
 
@@ -46,10 +46,24 @@ console.log(numbers)
 
 // Question - 4
 
-// I am not able to do.
 
+const findMissing = num => {
+  let max = Math.max(...num); 
+  let min = Math.min(...num); 
+  let missing = []
+  for(let i=min; i<= max; i++) {
+    if(!num.includes(i)) { 
+      missing.push(i); 
+    }
+  }
+  sum= 0
+  missing.forEach(each => {
+    sum+=each;
+  });
+  return sum;
+}
 
-
+console.log (findMissing([1,4,6]));
 
 // Question - 5
 
